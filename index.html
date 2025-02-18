@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ポートフォリオサイト</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="chrome-window">
+            <div class="chrome-header">
+                <div class="chrome-buttons">
+                    <span class="chrome-btn close"></span>
+                    <span class="chrome-btn minimize"></span>
+                    <span class="chrome-btn maximize"></span>
+                </div>
+                <!-- タブをウィンドウのサイズボタンの隣に追加 -->
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="home">ホーム</button>
+                    <button class="tab-button" data-tab="about">自己紹介</button>
+                    <button class="tab-button" data-tab="projects">プロジェクト</button>
+                </div>
+            </div>
+            <div class="chrome-body">
+                <div class="tab-container">
+                    <div class="tab-content" id="home">
+                        <h2>ホーム</h2>
+                        <p>ウェルカムメッセージなど、ホームに表示する内容。</p>
+                    </div>
+                    <div class="tab-content" id="about">
+                        <h2>自己紹介</h2>
+                        <p>ここに自己紹介を記載します。</p>
+                    </div>
+                    <div class="tab-content" id="projects">
+                        <h2>プロジェクト</h2>
+                        <p>プロジェクトの詳細やポートフォリオをここに追加します。</p>
+                    </div>
+                </div>
+                <footer>
+                    <p>&copy; 2025 私のポートフォリオ</p>
+                </footer>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
