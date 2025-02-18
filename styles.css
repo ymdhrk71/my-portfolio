@@ -1,20 +1,73 @@
+/* 読み込み画面 */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00c3ff;
+    animation: bounce 0.7s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1.2, 0.8);
+    }
+
+    15%, 85% {
+        transform: translateY(0) scale(1, 1);
+    }
+
+    30%, 70% {
+        transform: translateY(-40px);
+    }
+
+    40%, 60% {
+        transform: translateY(-46px);
+    }
+
+    50% {
+        transform: translateY(-50px);
+        /* ボールが上に40pxバウンド */
+    }
+}
+
 /* 全体的なレイアウト */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
 }
 
 /* Chromeウィンドウのスタイル */
 .chrome-window {
-    width: 70%;
+    width: 80%;
     height: 100%;
-    margin: 15%;
+    margin: 10%;
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgb(216, 216, 216);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.chrome-window.show {
+    transform: scale(1);
+    opacity: 1;
 }
 
 /* ヘッダー部分 */
@@ -39,7 +92,7 @@ body {
 
 /* タブボタンのスタイル */
 .tab-button {
-    width: 120px;
+    width: 100px;
     padding: 10px;
     background-color: #f1f1f1;
     border: none;
